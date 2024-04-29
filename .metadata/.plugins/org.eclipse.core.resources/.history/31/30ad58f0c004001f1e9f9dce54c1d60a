@@ -1,0 +1,17 @@
+package br.com.portifolio.crud.resources;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.portifolio.crud.entities.User;
+
+
+@RestController
+@RequestMapping(value = "/Users")
+public class UserResource {
+	public ResponseEntity<User>FindAll(){
+		User usuario = new User(1L, "Lion", "lion@email", "9999-0000", "123");
+		return ResponseEntity.ok().body(usuario);
+	}
+}
